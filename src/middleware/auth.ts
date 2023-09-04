@@ -20,6 +20,6 @@ export const checkAuthentification = (req: Request, res: Response, next: any) =>
   }
   catch (error) {
     console.error(error)
-    res.status(500).json(error)
+    res.status(500).json({message: `Server Error: ${error}`})
   }
 }
